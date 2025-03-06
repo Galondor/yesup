@@ -42,9 +42,6 @@ function App() {
       break;
     }
 
-    console.log("LVP:" + scoreLVP);
-    console.log("CPT:" + scoreCPT);
-
     if (currentQuestion + 1 < filteredQuestions.length) {
       setLoadingState(true);
       setTimeout(() => {
@@ -96,6 +93,9 @@ function App() {
               <h2 className='results_title'>
                 Thank you for taking the quiz!
               </h2>
+              <button onClick={() => window.location.reload()} className='refresh_button'>
+                New Quiz
+              </button>
             </div>
           ) : (
             <>
@@ -103,7 +103,7 @@ function App() {
                 Question {currentQuestion + 1} / {filteredQuestions.length}
               </h2>
               <h2 id='question'>{filteredQuestions[currentQuestion].text}</h2>
-              <ul>
+              <ul className='options'>
                 {filteredQuestions[currentQuestion].options.map((option, index) => {
                   return (
                     <li

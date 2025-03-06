@@ -32,6 +32,7 @@ button {
   background-color: #242424;
   color: #ffffff;
   border: none;
+  border-radius: 12px;
   display: block;
   width: 100%;
   padding: 10px;
@@ -160,12 +161,10 @@ header {
   width: 60%;
   overflow: hidden;
   margin-bottom: 20vh;
-  max-width: 700px;
 }
 
 .quiz_header {
   padding: 64px;
-  padding-bottom: 96px;
 }
 
 .loading_container {
@@ -188,6 +187,12 @@ header {
   }
 }
 
+.options {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .option {
   padding: 16px;
   border: 1px solid #242424;
@@ -199,13 +204,15 @@ header {
   transition: all 300ms ease-in-out;
   color: #fff;
   font-size: 18px;
+  box-sizing: border-box;
+  width: 35%;
 }
 
 .option:hover {
   background-color: #5ce1e6;
   color:#242424;
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .results {
@@ -348,7 +355,7 @@ header {
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .intro_para {
     font-size: 16px;
   }
@@ -373,6 +380,15 @@ header {
 
   .quiz_container {
     width: 90%;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+
+  .option {
+    width: 100%;
+    text-align: center;
   }
 }
 

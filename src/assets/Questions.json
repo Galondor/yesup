@@ -13,9 +13,9 @@
     "quiz": "Standard", 
     "options": [
       { "id": 0, "text": "Rental", "value": 0 },
-      { "id": 1, "text": "$0 to $100,000", "value": 5 },
-      { "id": 2, "text": "$100,000 to $225,000", "value": 10 },
-      { "id": 3, "text": "$250,000 or more", "value": 15 }
+      { "id": 1, "text": "$60,000 to $150,000", "value": 5 },
+      { "id": 2, "text": "$150,000 to $300,000", "value": 10 },
+      { "id": 3, "text": "$300,000 or more", "value": 15 }
     ]
   },
   {
