@@ -3,9 +3,9 @@
     "text": "Are you interested in Carpet or Luxury Vinyl Plank (LVP)?",
     "quiz": "Standard", 
     "options": [
-      { "id": 1, "text": "Carpet", "value": 10 },
-      { "id": 2, "text": "LVP", "value": 10 },
-      { "id": 3, "text": "Both", "value": 10 }
+      { "id": 1, "text": "Carpet", "value": 0 },
+      { "id": 2, "text": "LVP", "value": 0 },
+      { "id": 3, "text": "Both", "value": 0 }
     ]
   },
   {
