@@ -470,13 +470,29 @@ header {
   }
 }
 
+@media (max-width: 540px) {
+  .options {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .option {
+    width: 80%;
+    text-align: center;
+  }
+
+  .question_text {
+    font-size: 22px;
+  }
+}
+
 @media (max-width: 768px) {
   .cover {
     width: 80% !important;
   }
-
-
 }
+
 
 @media (max-width: 1024px) {
   .cover {
