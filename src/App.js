@@ -99,9 +99,9 @@ function App() {
             </div>
           ) : (
             <>
-              <h2 className='question_text'>
+              {/* <h2 className='question_text'>
                 Question {currentQuestion + 1} / {filteredQuestions.length}
-              </h2>
+              </h2> */}
               <h2 id='question'>{filteredQuestions[currentQuestion].text}</h2>
               <ul className='options'>
                 {filteredQuestions[currentQuestion].options.map((option, index) => {
