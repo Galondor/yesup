@@ -1,6 +1,7 @@
 import Questions from "./assets/Questions.json";
 import React, { useState } from "react";
 import loading from "./assets/loader.svg";
+import { Analytics } from "@vercel/analytics/react"
 import "./App.css";
 import "./assets/Biggby.jpg";
 
@@ -158,6 +159,7 @@ function App() {
           )}
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
