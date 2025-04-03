@@ -2,6 +2,7 @@ import Questions from "./assets/Questions.json";
 import React, { useState } from "react";
 import loading from "./assets/loader.svg";
 import "./App.css";
+import "./assets/Biggby.jpg";
 
 function App() {
   const [showResults, setShowResults] = useState(false);
@@ -83,31 +84,47 @@ function App() {
           )}
           {showResults ? (
             <div className='results'>
+              <style>{`
+                .quiz_header {
+                  background-color: #242424;
+                }
+              `}</style>
               {selectedQuizType === "Both" ? (
                 <>
-                  <h2 className='results_score'>LVP Score: {scoreLVP}</h2>
-                  <h2 className='results_score'>CPT Score: {scoreCPT}</h2>
+                  <h2 className='results_score'>Thank you for taking our quiz. <br></br> Here are your scores:</h2>
+                  <h2 className='results_score'>LVP Score: <b>{scoreLVP}</b></h2>
+                  <h2 className='results_score'>CPT Score: <b>{scoreCPT}</b></h2>
                 </>
               ) : selectedQuizType === "LVP" ? (
-                <h2 className='results_score'>LVP Score: {scoreLVP}</h2>
+                <>
+                <h2 className='results_score'>Thank you for taking our quiz. <br></br> Here is your score:</h2>
+                <h2 className='results_score'>LVP Score: <b>{scoreLVP}</b></h2>
+                </>
               ) : (
-                <h2 className='results_score'>CPT Score: {scoreCPT}</h2>
+                <>
+                <h2 className='results_score'>Thank you for taking our quiz. <br></br> Here is your score:</h2>
+                <h2 className='results_score'>CPT Score: <b>{scoreCPT}</b></h2>
+                </>
               )}
               <div className='results_desc'>
                 <h1 className='results_title'>
-                  Thank you for taking our quiz!
+                  The YESUP quiz, is designed to help you find your perfect balance of quality and value!
                 </h1>
-                <p className='results_para'> Give us a call or stop in with
-                your score for 10% or more off qualifying products!</p>
+                <div className='results_row'>
+                  <p className='results_para'> As a thank you to all who want to take this to the next step... Stop in today for your free estimate and your next Biggby purchase is on us!</p>
+                  <img className="promo_img" src={require("./assets/Biggby.jpg")} alt="Biggby"/>
+                </div>
                 <a href='tel: 15177831971' target="_blank" className='results_link'>(517)-783-1971</a>
                 <a href='https://www.google.com/maps/place/Simple+Flooring+Solutions/@42.251871,-84.4287409,18z/data=!3m1!4b1!4m6!3m5!1s0x883d255090026b9d:0x87b4ba6f90538326!8m2!3d42.2518698!4d-84.4279754!16s%2Fg%2F11b63bx7t7?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D' target="_blank"  className="results_link">
-                1116 Wildwood Avenue</a>
+                <b>1116 Wildwood Avenue</b></a>
+                <h1 className="promo_title">Limited Time Offer!</h1>
+                <p className="promo_desc">  <br /> <b>10% off ALL products. & Half off Labor on any order over 1000 Square Feet.</b></p>
               </div>
               <button   
                 onClick={() => window.location.reload()}
                 className='refresh_button'
               >
-                New Quiz
+                <b>New Quiz</b>
               </button>
             </div>
           ) : (
@@ -115,7 +132,7 @@ function App() {
               {/* <h2 className='question_text'>
                 Question {currentQuestion + 1} / {filteredQuestions.length}
               </h2> */}
-              <h2 id='question'>{filteredQuestions[currentQuestion].text}</h2>
+              <h2 id='question'><b>{filteredQuestions[currentQuestion].text}</b></h2>
               <ul className='options'>
                 {filteredQuestions[currentQuestion].options.map(
                   (option, index) => {
