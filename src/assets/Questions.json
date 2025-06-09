@@ -1,10 +1,10 @@
 [
   {
-    "text": "Are you interested in Carpet or Luxury Vinyl Plank (LVP)?",
+    "text": "Are you interested in Carpet or Waterproof Plank Flooring?",
     "quiz": "Standard", 
     "options": [
       { "id": 1, "text": "Carpet", "value": 10 },
-      { "id": 2, "text": "LVP", "value": 10 },
+      { "id": 2, "text": "Waterproof Plank Flooring", "value": 10 },
       { "id": 3, "text": "Both", "value": 10 }
     ]
   },
