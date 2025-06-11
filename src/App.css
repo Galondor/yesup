@@ -108,6 +108,7 @@ header {
 .intro_para {
   font-size: 20px;
   text-align: center;
+  width: 80%;
 }
 
 .info_container {
@@ -405,9 +406,15 @@ header {
   justify-content: center;
 }
 
+.procon_row {
+  display: flex;
+  flex-direction: column;
+}
+
 .procon {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .procon_text {
@@ -456,10 +463,6 @@ header {
 
   .title {
     font-size: 24px;
-  }
-
-  .intro_para {
-    width: 200px;
   }
 
   .cover {
@@ -934,7 +937,7 @@ header {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .cover {
     width: 70%;
   }
@@ -975,6 +978,11 @@ header {
   .procon_text {
     margin: 12px;
     font-size: 14px;
+    width: 80%;
+  }
+
+  .procon_list {
+    width: 80%;
   }
 
   .procon_list_items li {

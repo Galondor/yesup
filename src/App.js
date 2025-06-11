@@ -73,8 +73,8 @@ function App() {
         <div className='row'>
           <h1 className='title'>YESUP Flooring Quiz</h1>
           <p className='intro_para'>
-            The free quiz that will help you find your perfect floor. <br />{" "}
-            Take the quiz below to begin your journey! <br />{" "}
+            The free quiz that will help you find your perfect floor.
+            Take the quiz below to begin your journey!
             Scroll down to get informed about carpet and waterproof plank flooring.
           </p>
         </div>
@@ -163,7 +163,7 @@ function App() {
         </div>
       </div>
       <div className="container">
-        <div className="row">
+        <div className="row procon_row">
           <h1 className="procon_title">What are the differences between carpet and waterproof plank flooring?</h1>
           <div className="procon_container">
             <div className="procon">
