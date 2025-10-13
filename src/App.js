@@ -136,6 +136,7 @@ function App() {
               {/* <h2 className='question_text'>
                 Question {currentQuestion + 1} / {filteredQuestions.length}
               </h2> */}
+              <img className="question_image" src={require(`${filteredQuestions[currentQuestion].image}`)} alt="Question visual" />
               <h2 id='question'><b>{filteredQuestions[currentQuestion].text}</b></h2>
               <ul className='options'>
                 {filteredQuestions[currentQuestion].options.map(

@@ -2,6 +2,7 @@
   {
     "text": "Are you interested in Carpet or Waterproof Plank Flooring?",
     "quiz": "Standard", 
+    "image": "./assets/house.jpg",
     "options": [
       { "id": 1, "text": "Carpet", "value": 10 },
       { "id": 2, "text": "Waterproof Plank Flooring", "value": 10 },
@@ -10,7 +11,8 @@
   },
   {
     "text": "How much would your home sell for today?",
-    "quiz": "Standard", 
+    "quiz": "Standard",
+    "image": "./assets/house.jpg",
     "options": [
       { "id": 0, "text": "Rental", "value": 0 },
       { "id": 1, "text": "$60,000 to $150,000", "value": 5 },
@@ -20,7 +22,8 @@
   },
   {
     "text": "How old is your home?",
-    "quiz": "LVP", 
+    "quiz": "LVP",
+    "image": "./assets/house.jpg",
     "options": [
       { "id": 0, "text": "0 to 25 years", "value": 0 },
       { "id": 1, "text": "26 to 45 years", "value": 5 },
@@ -31,6 +34,7 @@
   {
     "text": "How flat are your floors?",
     "quiz": "LVP", 
+    "image": "./assets/floor.jpg",
     "options": [
       { "id": 0, "text": "Flat", "value": 0 },
       { "id": 1, "text": "Dipped", "value": 5 },
@@ -41,6 +45,7 @@
   {
     "text": "How many people live in your home?",
     "quiz": "Standard",
+    "image": "./assets/family.jpg",
     "options": [
       { "id": 0, "text": "1", "value": 0 },
       { "id": 1, "text": "2", "value": 5 },
@@ -51,6 +56,7 @@
   {
     "text": "How many are children?",
     "quiz": "Standard",
+    "image": "./assets/kids.jpg",
     "options": [
       { "id": 0, "text": "0", "value": 0 },
       { "id": 1, "text": "1", "value": 5 },
@@ -61,6 +67,7 @@
   {
     "text": "Do you wear shoes in your home?",
     "quiz": "Standard",
+    "image": "./assets/shoe.jpg",
     "options": [
       { "id": 0, "text": "No", "value": 0 },
       { "id": 1, "text": "Seldom", "value": 5 },
@@ -71,6 +78,7 @@
   {
     "text": "How often do you entertain guests?",
     "quiz": "Standard",
+    "image": "./assets/house.jpg",
     "options": [
       { "id": 0, "text": "Never", "value": 0 },
       { "id": 1, "text": "Seldom", "value": 5 },
@@ -81,6 +89,7 @@
   {
     "text": "How many guests at a time?",
     "quiz": "Standard",
+    "image": "./assets/house.jpg",
     "options": [
       { "id": 0, "text": "0", "value": 0 },
       { "id": 1, "text": "1 to 2", "value": 5 },
@@ -91,6 +100,7 @@
   {
     "text": "How many cats in your home?",
     "quiz": "Standard",
+    "image": "./assets/cat.jpg",
     "options": [
       { "id": 0, "text": "0", "value": 0 },
       { "id": 1, "text": "1 to 2", "value": 5 },
@@ -101,6 +111,7 @@
   {
     "text": "How many dogs in your home?",
     "quiz": "Standard",
+    "image": "./assets/dog.jpg",
     "options": [
       { "id": 0, "text": "0", "value": 0 },
       { "id": 1, "text": "1", "value": 5 },
@@ -111,6 +122,7 @@
   {
     "text": "How many years until you plan on moving?",
     "quiz": "Standard",
+    "image": "./assets/calendar.jpg",
     "options": [
       { "id": 0, "text": "0", "value": 0 },
       { "id": 1, "text": "1 to 2", "value": 5 },
@@ -121,6 +133,7 @@
   {
     "text": "How many years do you expect your flooring to last?",
     "quiz": "Standard",
+    "image": "./assets/calendar.jpg",
     "options": [
       { "id": 0, "text": "Rental or Selling Soon", "value": 0 },
       { "id": 1, "text": "1 to 5", "value": 5 },
@@ -131,6 +144,7 @@
   {
     "text": "How often do you have spill or stain accidents?",
     "quiz": "CPT",
+    "image": "./assets/house.jpg",
     "options": [
       { "id": 0, "text": "Never", "value": 0 },
       { "id": 1, "text": "Seldom", "value": 5 },
@@ -141,6 +155,7 @@
   {
     "text": "Are your accidents more likely pet or people related?",
     "quiz": "CPT",
+    "image": "./assets/house.jpg",
     "options": [
       { "id": 0, "text": "No Accidents", "value": 0 },
       { "id": 1, "text": "People", "value": 5 },
@@ -151,6 +166,7 @@
   {
     "text": "How important is comfort to you?",
     "quiz": "CPT",
+    "image": "./assets/house.jpg",
     "options": [
       { "id": 0, "text": "Not Important", "value": 0 },
       { "id": 1, "text": "Somewhat Important", "value": 5 },
