@@ -10,7 +10,6 @@ import "./assets/plank.png";
 
 function App() {
   const [showResults, setShowResults] = useState(false);
-  const [score, setScore] = useState(0);
   const [scoreLVP, setScoreLVP] = useState(0);
   const [scoreCPT, setScoreCPT] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -167,6 +166,7 @@ function App() {
                 <a
                   href='tel: 15177831971'
                   target='_blank'
+                  rel="noreferrer"
                   className='results_link'
                 >
                   (517)-783-1971
@@ -174,6 +174,7 @@ function App() {
                 <a
                   href='https://www.google.com/maps/place/Simple+Flooring+Solutions/@42.251871,-84.4287409,18z/data=!3m1!4b1!4m6!3m5!1s0x883d255090026b9d:0x87b4ba6f90538326!8m2!3d42.2518698!4d-84.4279754!16s%2Fg%2F11b63bx7t7?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D'
                   target='_blank'
+                  rel="noreferrer"
                   className='results_link'
                 >
                   <b>1116 Wildwood Avenue</b>
