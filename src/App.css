@@ -55,6 +55,11 @@ button {
   color: #242424;
 }
 
+.print_button {
+  background-color: #b8c6db;
+  color: #242424;
+}
+
 button:hover {
   background-color: #5ce1e6;
   color: #242424;
@@ -457,6 +462,37 @@ header {
   display: flex;
   flex-direction: column;
   padding: 12px;
+}
+
+#print_section {
+  display: none;
+}
+
+@media print {
+  #print_section {
+    display: flex;
+  }
+}
+
+.print_title {
+  text-align: center;
+}
+
+.print_header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.print_question {
+  font-size: 18px;
+  margin: 8px 0px;
+}
+
+.print_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes fadeOut {

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import loading from "./assets/loader.svg";
 import { Analytics } from "@vercel/analytics/react";
+import PrintComponent from "./components/printer";
 import "./App.css";
 import "./assets/Biggby.jpg";
 import "./assets/carpet.png";
@@ -29,6 +30,10 @@ function App() {
       question.quiz === "Standard",
   );
 
+  React.useEffect(() => {
+    localStorage.removeItem("quizScores");
+  }, []);
+
   const optionClicked = (value, text, quizType) => {
     if (loadingState) return;
 
@@ -54,6 +59,28 @@ function App() {
       default:
         break;
     }
+
+    const quizScores = JSON.parse(localStorage.getItem("quizScores")) || {
+      answers: [],
+      scoreLVP: 0,
+      scoreCPT: 0,
+      selectedQuizType: selectedQuizType,
+      currentQuestion: 0,
+    };
+
+    quizScores.answers.push({
+      question: filteredQuestions[currentQuestion].text,
+      selectedOption: text,
+      value: value,
+      quizType: quizType,
+    });
+
+    quizScores.scoreLVP = quizType === "LVP" || quizType === "Standard" ? quizScores.scoreLVP + value : quizScores.scoreLVP;
+    quizScores.scoreCPT = quizType === "CPT" || quizType === "Standard" ? quizScores.scoreCPT + value : quizScores.scoreCPT;
+    quizScores.selectedQuizType = selectedQuizType;
+    quizScores.currentQuestion = currentQuestion + 1;
+
+    localStorage.setItem("quizScores", JSON.stringify(quizScores));
 
     if (currentQuestion + 1 < filteredQuestions.length) {
       setLoadingState(true);
@@ -195,6 +222,7 @@ function App() {
               >
                 <b>New Quiz</b>
               </button>
+              <PrintComponent />
             </div>
           ) : (
             <>
