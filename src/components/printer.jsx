@@ -31,7 +31,8 @@ function PrintComponent() {
                                 : <p>No questions available.</p>
                             }
                             </div>
-                            <h2>LVP Score: {localStorage.getItem("quizScores") ? JSON.parse(localStorage.getItem("quizScores")).scoreLVP : "N/A"} | Carpet Score: {localStorage.getItem("quizScores") ? JSON.parse(localStorage.getItem("quizScores")).scoreCPT : "N/A"}</h2>
+                            <h2>YESUP Score: {localStorage.getItem("quizScores") ? JSON.parse(localStorage.getItem("quizScores")).scoreLVP : "N/A"}</h2>
+                            {/* <h2>LVP Score: {localStorage.getItem("quizScores") ? JSON.parse(localStorage.getItem("quizScores")).scoreLVP : "N/A"} | Carpet Score: {localStorage.getItem("quizScores") ? JSON.parse(localStorage.getItem("quizScores")).scoreCPT : "N/A"}</h2> */}
                         </div>
                     </div>
                 </div>

@@ -75,8 +75,14 @@ function App() {
       quizType: quizType,
     });
 
-    quizScores.scoreLVP = quizType === "LVP" || quizType === "Standard" ? quizScores.scoreLVP + value : quizScores.scoreLVP;
-    quizScores.scoreCPT = quizType === "CPT" || quizType === "Standard" ? quizScores.scoreCPT + value : quizScores.scoreCPT;
+    quizScores.scoreLVP =
+      quizType === "LVP" || quizType === "Standard"
+        ? quizScores.scoreLVP + value
+        : quizScores.scoreLVP;
+    quizScores.scoreCPT =
+      quizType === "CPT" || quizType === "Standard"
+        ? quizScores.scoreCPT + value
+        : quizScores.scoreCPT;
     quizScores.selectedQuizType = selectedQuizType;
     quizScores.currentQuestion = currentQuestion + 1;
 
@@ -193,7 +199,7 @@ function App() {
                 <a
                   href='tel: 15177831971'
                   target='_blank'
-                  rel="noreferrer"
+                  rel='noreferrer'
                   className='results_link'
                 >
                   (517)-783-1971
@@ -201,7 +207,7 @@ function App() {
                 <a
                   href='https://www.google.com/maps/place/Simple+Flooring+Solutions/@42.251871,-84.4287409,18z/data=!3m1!4b1!4m6!3m5!1s0x883d255090026b9d:0x87b4ba6f90538326!8m2!3d42.2518698!4d-84.4279754!16s%2Fg%2F11b63bx7t7?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D'
                   target='_blank'
-                  rel="noreferrer"
+                  rel='noreferrer'
                   className='results_link'
                 >
                   <b>1116 Wildwood Avenue</b>
@@ -237,27 +243,51 @@ function App() {
               <h2 id='question'>
                 <b>{filteredQuestions[currentQuestion].text}</b>
               </h2>
-              <ul className='options'>
-                {filteredQuestions[currentQuestion].options.map(
-                  (option, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className={`option ${loadingState ? "disabled" : ""}`}
-                        onClick={() =>
-                          optionClicked(
-                            option.value,
-                            option.text,
-                            filteredQuestions[currentQuestion].quiz,
-                          )
-                        }
-                      >
-                        {option.text}
-                      </li>
-                    );
-                  },
-                )}
-              </ul>
+              {currentQuestion === 2 || currentQuestion === 3 ? (
+                <div className='number_input_container'>
+                  <input
+                    className='number_input'
+                    type='number'
+                    placeholder='Enter a number'
+                    onKeyPress={(e) => {
+                      if (e.key === "Enter") {
+                        const value = parseInt(e.target.value) || 0;
+                        const finalValue =
+                          currentQuestion === 3 ? value * 5 : value;
+                        optionClicked(
+                          finalValue,
+                          e.target.value,
+                          filteredQuestions[currentQuestion].quiz,
+                        );
+                        e.target.value = "";
+                      }
+                    }}
+                    disabled={loadingState}
+                  />
+                </div>
+              ) : (
+                <ul className='options'>
+                  {filteredQuestions[currentQuestion].options.map(
+                    (option, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className={`option ${loadingState ? "disabled" : ""}`}
+                          onClick={() =>
+                            optionClicked(
+                              option.value,
+                              option.text,
+                              filteredQuestions[currentQuestion].quiz,
+                            )
+                          }
+                        >
+                          {option.text}
+                        </li>
+                      );
+                    },
+                  )}
+                </ul>
+              )}
             </>
           )}
         </div>

@@ -238,6 +238,14 @@ header {
   width: 35%;
 }
 
+.number_input {
+  padding: 12px;
+  border: 1px solid #242424;
+  border-radius: 12px;
+  font-size: 18px;
+  width: 100%;
+}
+
 /* Prevent :hover sticking on mobile by disabling hover effect on touch devices */
 @media (hover: hover) and (pointer: fine) {
   .option:hover {
