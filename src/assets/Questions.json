@@ -14,15 +14,14 @@
     "quiz": "Standard",
     "image": "./assets/house.jpg",
     "options": [
-      { "id": 0, "text": "Rental", "value": 30 },
-      { "id": 1, "text": "Flip House", "value": 30 },
-      { "id": 2, "text": "Your House", "value": 50 }
+      { "id": 0, "text": "Rental or Investment Property", "value": 30 },
+      { "id": 2, "text": "Personal Home", "value": 50 }
     ]
   },
   {
-    "text": "How many children live in the home?",
+    "text": "How many people live in the home?",
     "quiz": "Standard",
-    "image": "./assets/kids.jpg",
+    "image": "./assets/family.jpg",
     "options": [
       { "id": 0, "text": "Enter a number", "type": "number", "value": null }
     ]
