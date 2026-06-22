@@ -264,6 +264,19 @@ function App() {
                     }}
                     disabled={loadingState}
                   />
+                  <button onClick={() => {
+                    const input = document.querySelector(".number_input");
+                    const value = parseInt(input.value) || 0;
+                    const finalValue = currentQuestion === 3 ? value * 5 : value;
+                    optionClicked(
+                      finalValue,
+                      input.value,
+                      filteredQuestions[currentQuestion].quiz,
+                    );
+                    input.value = "";
+                  }} className='submit_button'>
+                    Submit
+                  </button>
                 </div>
               ) : (
                 <ul className='options'>
